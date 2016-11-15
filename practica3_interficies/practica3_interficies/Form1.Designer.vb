@@ -27,14 +27,14 @@ Partial Class Form1
         Me.Lista = New System.Windows.Forms.ListBox()
         Me.TxtUsuari = New System.Windows.Forms.TextBox()
         Me.BtnAgr = New System.Windows.Forms.Button()
-        Me.Btn_OrdNum = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboObligatorio = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Btn_Inf = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -57,7 +57,7 @@ Partial Class Form1
         '
         'TxtUsuari
         '
-        Me.TxtUsuari.Location = New System.Drawing.Point(343, 64)
+        Me.TxtUsuari.Location = New System.Drawing.Point(352, 50)
         Me.TxtUsuari.Name = "TxtUsuari"
         Me.TxtUsuari.Size = New System.Drawing.Size(213, 22)
         Me.TxtUsuari.TabIndex = 2
@@ -71,14 +71,14 @@ Partial Class Form1
         Me.BtnAgr.Text = "Añadir"
         Me.BtnAgr.UseVisualStyleBackColor = True
         '
-        'Btn_OrdNum
+        'Button3
         '
-        Me.Btn_OrdNum.Location = New System.Drawing.Point(29, 355)
-        Me.Btn_OrdNum.Name = "Btn_OrdNum"
-        Me.Btn_OrdNum.Size = New System.Drawing.Size(93, 60)
-        Me.Btn_OrdNum.TabIndex = 4
-        Me.Btn_OrdNum.Text = "Ordenación numérica"
-        Me.Btn_OrdNum.UseVisualStyleBackColor = True
+        Me.Button3.Location = New System.Drawing.Point(29, 355)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(93, 60)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Ordenación numérica"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -92,7 +92,7 @@ Partial Class Form1
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(372, 375)
+        Me.RadioButton1.Location = New System.Drawing.Point(398, 394)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(105, 21)
         Me.RadioButton1.TabIndex = 6
@@ -136,28 +136,28 @@ Partial Class Form1
         Me.Button5.Text = "Eliminar"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Btn_Inf
+        'Button6
         '
-        Me.Btn_Inf.Location = New System.Drawing.Point(398, 299)
-        Me.Btn_Inf.Name = "Btn_Inf"
-        Me.Btn_Inf.Size = New System.Drawing.Size(121, 43)
-        Me.Btn_Inf.TabIndex = 11
-        Me.Btn_Inf.Text = "Informacion"
-        Me.Btn_Inf.UseVisualStyleBackColor = True
+        Me.Button6.Location = New System.Drawing.Point(398, 299)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(121, 43)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "Informacion"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 575)
-        Me.Controls.Add(Me.Btn_Inf)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.ComboObligatorio)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Btn_OrdNum)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.BtnAgr)
         Me.Controls.Add(Me.TxtUsuari)
         Me.Controls.Add(Me.Lista)
@@ -174,12 +174,12 @@ Partial Class Form1
     Friend WithEvents Lista As ListBox
     Friend WithEvents TxtUsuari As TextBox
     Friend WithEvents BtnAgr As Button
-    Friend WithEvents Btn_OrdNum As Button
+    Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboObligatorio As ComboBox
     Friend WithEvents Button5 As Button
-    Friend WithEvents Btn_Inf As Button
+    Friend WithEvents Button6 As Button
 End Class
