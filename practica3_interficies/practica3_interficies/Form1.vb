@@ -124,4 +124,34 @@
 
         End If
     End Sub
+
+    Private Sub Btn_ord_asci_Click(sender As Object, e As EventArgs) Handles Btn_ord_asci.Click
+        Dim resultat As Integer
+        If (Rdbtn_Desc.Checked = False) Then
+            For I = 0 To MAX
+                For J = 0 To MAX
+                    If CStr(Lista.Items.Item(I)) < CStr(Lista.Items.Item(J)) Then
+                        resultat = CStr(Lista.Items.Item(J))
+                        Lista.Items.Item(J) = Lista.Items.Item(I)
+                        Lista.Items.Item(I) = resultat
+                    End If
+                Next J
+            Next I
+
+
+
+        ElseIf (Rdbtn_Desc.Checked = True) Then
+            For I = 0 To MAX
+                For J = 0 To MAX
+                    If CStr(Lista.Items.Item(I)) > CStr(Lista.Items.Item(J)) Then
+                        resultat = CStr(Lista.Items.Item(J))
+                        Lista.Items.Item(J) = Lista.Items.Item(I)
+                        Lista.Items.Item(I) = resultat
+                    End If
+                Next J
+            Next I
+
+
+        End If
+    End Sub
 End Class
