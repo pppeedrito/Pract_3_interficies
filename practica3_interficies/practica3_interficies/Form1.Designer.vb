@@ -92,7 +92,7 @@ Partial Class Form1
         'Rdbtn_Desc
         '
         Me.Rdbtn_Desc.AutoSize = True
-        Me.Rdbtn_Desc.Location = New System.Drawing.Point(398, 394)
+        Me.Rdbtn_Desc.Location = New System.Drawing.Point(89, 431)
         Me.Rdbtn_Desc.Name = "Rdbtn_Desc"
         Me.Rdbtn_Desc.Size = New System.Drawing.Size(105, 21)
         Me.Rdbtn_Desc.TabIndex = 6

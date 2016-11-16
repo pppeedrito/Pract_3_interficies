@@ -94,4 +94,34 @@
         MsgBox("El numero mas grande es: " + CStr(maximo) + vbCr + "El numero mas pequeño es: " + CStr(minimo) + vbCr + "La media de los numeros  es: " + CStr(media))
 
     End Sub
+
+    Private Sub btn_ord_num_Click(sender As Object, e As EventArgs) Handles btn_ord_num.Click
+        Dim resultat As Integer
+        If (Rdbtn_Desc.Checked = False) Then
+            For I = 0 To MAX
+                For J = 0 To MAX
+                    If CDbl(Lista.Items.Item(I)) < CDbl(Lista.Items.Item(J)) Then
+                        resultat = CDbl(Lista.Items.Item(J))
+                        Lista.Items.Item(J) = Lista.Items.Item(I)
+                        Lista.Items.Item(I) = resultat
+                    End If
+                Next J
+            Next I
+
+
+
+        ElseIf (Rdbtn_Desc.Checked = True) Then
+            For I = 0 To MAX
+                For J = 0 To MAX
+                    If CDbl(Lista.Items.Item(I)) > CDbl(Lista.Items.Item(J)) Then
+                        resultat = CDbl(Lista.Items.Item(J))
+                        Lista.Items.Item(J) = Lista.Items.Item(I)
+                        Lista.Items.Item(I) = resultat
+                    End If
+                Next J
+            Next I
+
+
+        End If
+    End Sub
 End Class
