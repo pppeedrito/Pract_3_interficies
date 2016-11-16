@@ -1,5 +1,4 @@
 ﻿Public Class Form1
-    Private MAX As Integer
     Private Sub BtnAgr_Click(sender As Object, e As EventArgs) Handles BtnAgr.Click
         OrdenarCombo(TxtUsuari.Text)
 
@@ -7,13 +6,13 @@
 
     Private Sub OrdenarCombo(text As String)
         Dim numero As Integer
-        MAX = Lista.SelectedItems.Count() - 1
         Try
-            numero = text
+            numero = CDbl(text)
         Catch ex As Exception
             MsgBox("Error introducido malo.")
             TxtUsuari.Clear()
             TxtUsuari.Focus()
+            Exit Sub
 
         End Try
         Dim i As Integer
@@ -21,28 +20,30 @@
         Select Case i
             Case 0
                 Lista.Items.Insert(0, TxtUsuari.Text)
+                TxtUsuari.Text = ""
             Case 1
-                If CInt(Lista.Items.Count()) = CInt("0") Then
-                    Lista.Items.Add(text)
+                Dim cont As Integer
+                Dim agregar As Boolean
+                cont = 0
+                agregar = False
+                While cont < Lista.Items.Count And agregar = False
+                    If CDbl(Lista.Items.Item(cont)) >= CDbl(text) Then
+                        Lista.Items.Insert(cont, text)
+                        TxtUsuari.Text = ""
+                        agregar = True
+                    End If
+                    cont = cont + 1
+                End While
+                If agregar = False Then
+                    Lista.Items.Add(TxtUsuari.Text)
+                    TxtUsuari.Text = ""
 
-                Else
-                    Dim j = 0
-                    For j = 0 To MAX Step 1
-                        If (CDbl(text) < CDbl(Lista.Items.Item(j))) Then
-                            Lista.Items.Insert(j, CDbl(text))
-                            Exit For
-
-                        ElseIf (i = MAX) Then
-                            Lista.Items.Add(text)
-                            Exit For
-
-                        End If
-                    Next j
-
-                    j = 0
                 End If
+
+
             Case 2
                 Lista.Items.Add(TxtUsuari.Text)
+                TxtUsuari.Text = ""
 
         End Select
     End Sub
@@ -78,7 +79,7 @@
         End Try
 
 
-        For j = 0 To MAX Step 1
+        For j = 0 To Lista.SelectedItems.Count() - 1 Step 1
             suma = suma + Lista.Items.Item(j)
 
             If (CDbl(Lista.Items.Item(j) > maximo)) Then
@@ -96,62 +97,40 @@
     End Sub
 
     Private Sub btn_ord_num_Click(sender As Object, e As EventArgs) Handles btn_ord_num.Click
-        Dim resultat As Integer
-        If (Rdbtn_Desc.Checked = False) Then
-            For I = 0 To MAX
-                For J = 0 To MAX
+        Dim aux As Integer
+        If Chck_desc.Checked = True Then
+            For I = 0 To Lista.Items.Count - 1 Step +1
+                For J = 0 To Lista.Items.Count - 1 Step +1
                     If CDbl(Lista.Items.Item(I)) < CDbl(Lista.Items.Item(J)) Then
-                        resultat = CDbl(Lista.Items.Item(J))
+                        aux = CDbl(Lista.Items.Item(J))
                         Lista.Items.Item(J) = Lista.Items.Item(I)
-                        Lista.Items.Item(I) = resultat
+                        Lista.Items.Item(I) = aux
                     End If
-                Next J
-            Next I
+                Next
+            Next
+        ElseIf Chck_desc.Checked = False Then
 
-
-
-        ElseIf (Rdbtn_Desc.Checked = True) Then
-            For I = 0 To MAX
-                For J = 0 To MAX
+            For I = 0 To Lista.Items.Count - 1 Step +1
+                For J = 0 To Lista.Items.Count - 1 Step +1
                     If CDbl(Lista.Items.Item(I)) > CDbl(Lista.Items.Item(J)) Then
-                        resultat = CDbl(Lista.Items.Item(J))
+                        aux = CDbl(Lista.Items.Item(J))
                         Lista.Items.Item(J) = Lista.Items.Item(I)
-                        Lista.Items.Item(I) = resultat
+                        Lista.Items.Item(I) = aux
                     End If
-                Next J
-            Next I
-
-
+                Next
+            Next
         End If
     End Sub
 
     Private Sub Btn_ord_asci_Click(sender As Object, e As EventArgs) Handles Btn_ord_asci.Click
-        Dim resultat As Integer
-        If (Rdbtn_Desc.Checked = False) Then
-            For I = 0 To MAX
-                For J = 0 To MAX
-                    If CStr(Lista.Items.Item(I)) < CStr(Lista.Items.Item(J)) Then
-                        resultat = CStr(Lista.Items.Item(J))
-                        Lista.Items.Item(J) = Lista.Items.Item(I)
-                        Lista.Items.Item(I) = resultat
-                    End If
-                Next J
-            Next I
+        Lista.Sorted = True
+        Lista.Sorted = False
 
-
-
-        ElseIf (Rdbtn_Desc.Checked = True) Then
-            For I = 0 To MAX
-                For J = 0 To MAX
-                    If CStr(Lista.Items.Item(I)) > CStr(Lista.Items.Item(J)) Then
-                        resultat = CStr(Lista.Items.Item(J))
-                        Lista.Items.Item(J) = Lista.Items.Item(I)
-                        Lista.Items.Item(I) = resultat
-                    End If
-                Next J
-            Next I
-
-
-        End If
     End Sub
+
+    Private Sub Btn_preg_Click(sender As Object, e As EventArgs) Handles Btn_preg.Click
+        'tienes que preguntar que qioere intorducir con un aceptar o cancelar y controlando que combo haya pillado algo.
+
+    End Sub
+
 End Class

@@ -29,12 +29,12 @@ Partial Class Form1
         Me.BtnAgr = New System.Windows.Forms.Button()
         Me.btn_ord_num = New System.Windows.Forms.Button()
         Me.Btn_ord_asci = New System.Windows.Forms.Button()
-        Me.Rdbtn_Desc = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboObligatorio = New System.Windows.Forms.ComboBox()
         Me.Btn_Eliminar = New System.Windows.Forms.Button()
         Me.Btn_info = New System.Windows.Forms.Button()
+        Me.Chck_desc = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Btn_preg
@@ -89,17 +89,6 @@ Partial Class Form1
         Me.Btn_ord_asci.Text = "Ordenación ASCI"
         Me.Btn_ord_asci.UseVisualStyleBackColor = True
         '
-        'Rdbtn_Desc
-        '
-        Me.Rdbtn_Desc.AutoSize = True
-        Me.Rdbtn_Desc.Location = New System.Drawing.Point(89, 431)
-        Me.Rdbtn_Desc.Name = "Rdbtn_Desc"
-        Me.Rdbtn_Desc.Size = New System.Drawing.Size(105, 21)
-        Me.Rdbtn_Desc.TabIndex = 6
-        Me.Rdbtn_Desc.TabStop = True
-        Me.Rdbtn_Desc.Text = "Descendent"
-        Me.Rdbtn_Desc.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -145,17 +134,27 @@ Partial Class Form1
         Me.Btn_info.Text = "Informacion"
         Me.Btn_info.UseVisualStyleBackColor = True
         '
+        'Chck_desc
+        '
+        Me.Chck_desc.AutoSize = True
+        Me.Chck_desc.Location = New System.Drawing.Point(78, 435)
+        Me.Chck_desc.Name = "Chck_desc"
+        Me.Chck_desc.Size = New System.Drawing.Size(117, 21)
+        Me.Chck_desc.TabIndex = 12
+        Me.Chck_desc.Text = "Descendiente"
+        Me.Chck_desc.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 575)
+        Me.Controls.Add(Me.Chck_desc)
         Me.Controls.Add(Me.Btn_info)
         Me.Controls.Add(Me.Btn_Eliminar)
         Me.Controls.Add(Me.ComboObligatorio)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Rdbtn_Desc)
         Me.Controls.Add(Me.Btn_ord_asci)
         Me.Controls.Add(Me.btn_ord_num)
         Me.Controls.Add(Me.BtnAgr)
@@ -176,10 +175,10 @@ Partial Class Form1
     Friend WithEvents BtnAgr As Button
     Friend WithEvents btn_ord_num As Button
     Friend WithEvents Btn_ord_asci As Button
-    Friend WithEvents Rdbtn_Desc As RadioButton
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboObligatorio As ComboBox
     Friend WithEvents Btn_Eliminar As Button
     Friend WithEvents Btn_info As Button
+    Friend WithEvents Chck_desc As CheckBox
 End Class
