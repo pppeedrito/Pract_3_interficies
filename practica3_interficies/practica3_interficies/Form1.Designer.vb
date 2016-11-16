@@ -23,28 +23,28 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn_preg = New System.Windows.Forms.Button()
         Me.Lista = New System.Windows.Forms.ListBox()
         Me.TxtUsuari = New System.Windows.Forms.TextBox()
         Me.BtnAgr = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.btn_ord_num = New System.Windows.Forms.Button()
+        Me.Btn_ord_asci = New System.Windows.Forms.Button()
+        Me.Rdbtn_Desc = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboObligatorio = New System.Windows.Forms.ComboBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Btn_Eliminar = New System.Windows.Forms.Button()
+        Me.Btn_info = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'Btn_preg
         '
-        Me.Button1.Location = New System.Drawing.Point(398, 191)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(121, 37)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Preguntar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_preg.Location = New System.Drawing.Point(398, 191)
+        Me.Btn_preg.Name = "Btn_preg"
+        Me.Btn_preg.Size = New System.Drawing.Size(121, 37)
+        Me.Btn_preg.TabIndex = 0
+        Me.Btn_preg.Text = "Preguntar"
+        Me.Btn_preg.UseVisualStyleBackColor = True
         '
         'Lista
         '
@@ -71,34 +71,34 @@ Partial Class Form1
         Me.BtnAgr.Text = "Añadir"
         Me.BtnAgr.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btn_ord_num
         '
-        Me.Button3.Location = New System.Drawing.Point(29, 355)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(93, 60)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Ordenación numérica"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btn_ord_num.Location = New System.Drawing.Point(29, 355)
+        Me.btn_ord_num.Name = "btn_ord_num"
+        Me.btn_ord_num.Size = New System.Drawing.Size(93, 60)
+        Me.btn_ord_num.TabIndex = 4
+        Me.btn_ord_num.Text = "Ordenación numérica"
+        Me.btn_ord_num.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Btn_ord_asci
         '
-        Me.Button4.Location = New System.Drawing.Point(144, 355)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(91, 60)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Ordenación ASCI"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Btn_ord_asci.Location = New System.Drawing.Point(144, 355)
+        Me.Btn_ord_asci.Name = "Btn_ord_asci"
+        Me.Btn_ord_asci.Size = New System.Drawing.Size(91, 60)
+        Me.Btn_ord_asci.TabIndex = 5
+        Me.Btn_ord_asci.Text = "Ordenación ASCI"
+        Me.Btn_ord_asci.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'Rdbtn_Desc
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(398, 394)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(105, 21)
-        Me.RadioButton1.TabIndex = 6
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Descendent"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Rdbtn_Desc.AutoSize = True
+        Me.Rdbtn_Desc.Location = New System.Drawing.Point(398, 394)
+        Me.Rdbtn_Desc.Name = "Rdbtn_Desc"
+        Me.Rdbtn_Desc.Size = New System.Drawing.Size(105, 21)
+        Me.Rdbtn_Desc.TabIndex = 6
+        Me.Rdbtn_Desc.TabStop = True
+        Me.Rdbtn_Desc.Text = "Descendent"
+        Me.Rdbtn_Desc.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -127,41 +127,41 @@ Partial Class Form1
         Me.ComboObligatorio.Size = New System.Drawing.Size(213, 24)
         Me.ComboObligatorio.TabIndex = 9
         '
-        'Button5
+        'Btn_Eliminar
         '
-        Me.Button5.Location = New System.Drawing.Point(398, 246)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(121, 37)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "Eliminar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Btn_Eliminar.Location = New System.Drawing.Point(398, 246)
+        Me.Btn_Eliminar.Name = "Btn_Eliminar"
+        Me.Btn_Eliminar.Size = New System.Drawing.Size(121, 37)
+        Me.Btn_Eliminar.TabIndex = 10
+        Me.Btn_Eliminar.Text = "Eliminar"
+        Me.Btn_Eliminar.UseVisualStyleBackColor = True
         '
-        'Button6
+        'Btn_info
         '
-        Me.Button6.Location = New System.Drawing.Point(398, 299)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(121, 43)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "Informacion"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Btn_info.Location = New System.Drawing.Point(398, 299)
+        Me.Btn_info.Name = "Btn_info"
+        Me.Btn_info.Size = New System.Drawing.Size(121, 43)
+        Me.Btn_info.TabIndex = 11
+        Me.Btn_info.Text = "Informacion"
+        Me.Btn_info.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 575)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Btn_info)
+        Me.Controls.Add(Me.Btn_Eliminar)
         Me.Controls.Add(Me.ComboObligatorio)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Rdbtn_Desc)
+        Me.Controls.Add(Me.Btn_ord_asci)
+        Me.Controls.Add(Me.btn_ord_num)
         Me.Controls.Add(Me.BtnAgr)
         Me.Controls.Add(Me.TxtUsuari)
         Me.Controls.Add(Me.Lista)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Btn_preg)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -170,16 +170,16 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Btn_preg As Button
     Friend WithEvents Lista As ListBox
     Friend WithEvents TxtUsuari As TextBox
     Friend WithEvents BtnAgr As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents btn_ord_num As Button
+    Friend WithEvents Btn_ord_asci As Button
+    Friend WithEvents Rdbtn_Desc As RadioButton
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboObligatorio As ComboBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Btn_Eliminar As Button
+    Friend WithEvents Btn_info As Button
 End Class
