@@ -71,6 +71,8 @@
     End Sub
 
     Private Sub Btn_info_Click(sender As Object, e As EventArgs) Handles Btn_info.Click
+        'aqui controlamos que no clicke y no haya datos. 
+        ' tambien calculamos el minimo el maximos y despues con el contador hacemos la media . y lo mostramos por msgbox
         Dim minimo, maximo, media As Double
         Dim contador As Integer
 
@@ -104,6 +106,7 @@
     End Sub
 
     Private Sub btn_ord_num_Click(sender As Object, e As EventArgs) Handles btn_ord_num.Click
+        'al ordenadar utilizamos estos dfor para ascendiente y descendiente 
         Dim aux As Integer
         If Chck_desc.Checked = True Then
             For I = 0 To Lista.Items.Count - 1 Step +1
